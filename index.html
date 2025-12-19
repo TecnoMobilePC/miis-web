@@ -4,155 +4,200 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MIÏS · Bolsos Artesanales</title>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       background: #f2f2f2; /* gris humo */
       color: #333;
     }
+
     header {
-      background: #000; /* negro logo */
-      padding: 20px;
+      background: #000;
+      color: #fff;
       text-align: center;
-      color: #ffffff;
+      padding: 20px;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.2em;
+      letter-spacing: 3px;
     }
+
     nav {
       margin-top: 10px;
     }
+
     nav a {
-      color: #ffffff;
+      color: #fff;
       margin: 0 10px;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 0.9em;
+      letter-spacing: 1px;
     }
+
     .hero {
-      padding: 60px 20px;
+      background: #fff;
       text-align: center;
-      background: #ffffff;
+      padding: 60px 20px;
     }
+
     .hero h2 {
+      font-weight: 300;
       font-size: 2em;
       margin-bottom: 10px;
     }
+
     .section {
-      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 60px 20px;
     }
+
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
     }
+
     .product {
-      background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 15px;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
     }
-    .product img {
-      width: 100%;
-      border-radius: 6px;
+
+    .product-text h3 {
+      margin: 0 0 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
     }
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-    .product p {
+
+    .product-text p {
       font-size: 0.9em;
+      color: #666;
+      margin-bottom: 20px;
+      max-width: 420px;
     }
+
     .product button {
+      display: block;
+      width: 100%;
       background: #b08d57; /* oro viejo */
       border: none;
+      color: #fff;
       padding: 10px 15px;
-      color: #ffffff;
-      border-radius: 5px;
+      margin-bottom: 10px;
       cursor: pointer;
-      width: 100%;
-      font-size: 0.9em;
+      font-size: 0.85em;
+      letter-spacing: 1px;
     }
+
+    .product img {
+      max-width: 420px;
+      width: 100%;
+      display: block;
+    }
+
     footer {
-      background: #333;
-      color: #ffffff;
+      background: #000;
+      color: #fff;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      font-size: 0.8em;
+    }
+
+    @media (max-width: 768px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+
+      .product img {
+        margin-top: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>MIÏS</h1>
     <nav>
-      <a href="#productos">Productos</a>
-      <a href="#sobre">Sobre nosotros</a>
+      <a href="#productos">Colección</a>
+      <a href="#sobre">Esencia</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Elegancia en cada detalle</h2>
-    <p>Bolsos minimalistas diseñados para durar</p>
+    <h2>Elegancia que trasciende el tiempo</h2>
+    <p>Piezas cuidadosamente diseñadas para acompañarte con discreción y sofisticación.</p>
   </section>
 
   <section id="productos" class="section">
-    <h2>Nuestros bolsos</h2>
+    <h2>La colección</h2>
+
     <div class="products">
+
       <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Bolso 1" />
-        <h3>Bolso Modelo A</h3>
-        <p>Bolso artesanal de alta calidad.</p>
-        <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">WhatsApp</button>
-        <br/><br/>
-        <button onclick="window.open('https://buy.stripe.com/XXXXXXXX','_blank')">Pagar con tarjeta</button>
-        <br/><br/>
-        <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        <div class="product-text">
+          <h3>Modelo A</h3>
+          <p>Confeccionado con materiales seleccionados y una atención absoluta al detalle.</p>
+          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Comprar por WhatsApp</button>
+          <button onclick="window.open('https://buy.stripe.com/XXXXXXXX','_blank')">Pagar con tarjeta</button>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo A">
       </div>
+
       <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Bolso 2" />
-        <h3>Bolso Modelo B</h3>
-        <p>Elegante y práctico para el día a día.</p>
-        <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">WhatsApp</button>
-        <br/><br/>
-        <button onclick="window.open('https://buy.stripe.com/XXXXXXXX','_blank')">Pagar con tarjeta</button>
-        <br/><br/>
-        <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        <div class="product-text">
+          <h3>Modelo B</h3>
+          <p>Una silueta equilibrada, pensada para el uso diario con un acabado refinado.</p>
+          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Comprar por WhatsApp</button>
+          <button onclick="window.open('https://buy.stripe.com/XXXXXXXX','_blank')">Pagar con tarjeta</button>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B">
       </div>
+
       <div class="product">
-        <img src="https://via.placeholder.com/300x200" alt="Bolso 3" />
-        <h3>Bolso Modelo C</h3>
-        <p>Diseño exclusivo y moderno.</p>
-        <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">WhatsApp</button>
-        <br/><br/>
-        <button onclick="window.open('https://buy.stripe.com/XXXXXXXX','_blank')">Pagar con tarjeta</button>
-        <br/><br/>
-        <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        <div class="product-text">
+          <h3>Modelo C</h3>
+          <p>Una pieza distintiva que combina carácter contemporáneo y elegancia esencial.</p>
+          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Comprar por WhatsApp</button>
+          <button onclick="window.open('https://buy.stripe.com/XXXXXXXX','_blank')">Pagar con tarjeta</button>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo C">
       </div>
+
     </div>
   </section>
 
   <section id="sobre" class="section">
-    <h2>Sobre la marca</h2>
-    <p>Somos una marca artesanal dedicada a crear bolsos únicos, cuidando cada detalle y utilizando materiales de calidad.</p>
+    <h2>La esencia de MIÏS</h2>
+    <p>
+      MIÏS nace de una visión clara: crear bolsos atemporales donde la forma,
+      la función y la estética conviven en equilibrio. Cada pieza refleja una
+      filosofía de diseño sereno y una elegancia que no necesita exageraciones.
+    </p>
   </section>
 
   <section id="contacto" class="section">
     <h2>Contacto</h2>
-    <p>Haz tu pedido o consúltanos:</p>
     <p>
       <a href="https://wa.me/XXXXXXXXX" target="_blank">WhatsApp</a> ·
       <a href="https://instagram.com/miis" target="_blank">Instagram</a>
     </p>
-    <p>Pagos online disponibles.</p>
   </section>
 
   <footer>
-    <p>© 2025 MIÏS. Todos los derechos reservados.</p>
+    © 2025 MIÏS. Todos los derechos reservados.
   </footer>
+
 </body>
 </html>
