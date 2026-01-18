@@ -154,3 +154,33 @@ footer {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .product {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .product img {
+    width: 100%;
+    max-width: 280px;   /* 🔥 AQUÍ está la magia */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .product-text {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+}
