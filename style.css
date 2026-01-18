@@ -1,9 +1,18 @@
 body {
   margin: 0;
   font-family: 'Libre Baskerville', serif;
-  background: #F3F1EC; /* marfil */
-  color: #2E2E2E; /* gris humo */
+  background: #F3F1EC;
+  color: #2E2E2E;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+main {
+  flex: 1;
+}
+
 
 /* HEADER */
 header {
@@ -12,6 +21,7 @@ header {
   padding: 24px;
   text-align: center;
   color: #F3F1EC;
+  position: relative;
 }
 
 header h1 {
@@ -184,3 +194,89 @@ footer {
   }
 
 }
+
+/* BUSCADOR */
+.search {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.search input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(243,241,236,0.4);
+  color: #F3F1EC;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  padding: 4px 0;
+  width: 120px;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: rgba(243,241,236,0.6);
+}
+
+.search input:focus {
+  border-color: #B8A36A;
+}
+
+/* SEARCH – ajuste móvil */
+@media (max-width: 600px) {
+	
+	.header-actions {
+    position: static;
+    margin-top: 16px;
+    justify-content: center;
+  }
+
+  .search {
+    position: static;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .search input {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .header-actions {
+    gap: 20px;
+  }
+
+  .icon-btn {
+    font-size: 1.4em;
+  }
+
+}
+
+/* ICONOS DEL BUSCADOR, INICIAR SESION Y CESTA */
+
+.header-actions {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #F3F1EC;
+  font-size: 1.3em;   
+  cursor: pointer;
+  padding: 6px;
+  opacity: 0.9;       
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+
