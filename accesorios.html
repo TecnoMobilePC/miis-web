@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIÏS · Bolsos Artesanales</title>
+  <style>
+ body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #F3F1EC; /* marfil */
+      color: #2E2E2E; /* gris humo */
+    }
+    header {
+      background: #0F0F0F; /* negro profundo */
+      padding: 24px;
+      text-align: center;
+      color: #F3F1EC;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+      letter-spacing: 4px;
+      font-weight: 500;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      position: relative;
+      color: #F3F1EC;
+      margin: 0 12px;
+      text-decoration: none;
+      font-size: 0.75em;
+      letter-spacing: 2px;
+    }
+    .hero {
+      padding: 80px 20px;
+      text-align: center;
+      background: #F3F1EC;
+    }
+    .hero h2 {
+      font-size: 2.1em;
+      margin-bottom: 14px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+   /* .nav-item {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 16px;
+    } */ /* ya no hace falta puesto que no hay menú desplegable */
+
+   /* .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0F0F0F;
+      padding: 12px 0;
+      display: none;
+      flex-direction: column;
+      min-width: 160px;
+      z-index: 10;
+    } /* /* ya no hace falta puesto que no hay menú desplegable */
+
+    /* .dropdown a {
+      color: #F3F1EC;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 0.7em;
+      letter-spacing: 2px;
+      text-align: center;
+    } */ /* ya no hace falta puesto que no hay menú desplegable */
+
+    /* .dropdown a:hover {
+      background: rgba(184,163,106,0.15);
+    } */ /* ya no hace falta puesto que no hay menú desplegable */
+
+    .nav-item:hover .dropdown {
+      display: flex;
+    }
+
+   /*  .collection-menu a {
+      text-decoration: none;
+      font-size: 0.75em;
+      letter-spacing: 3px;
+      color: #2E2E2E;
+      padding-bottom: 6px;
+      border-bottom: 1px solid transparent;
+    } */ /* ya no hace falta puesto que no hay menú desplegable */
+
+    .collection-menu a:hover {
+      border-color: #B8A36A;
+    }
+
+    .products {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+      background: transparent;
+      padding: 0;
+      justify-items: center;
+      text-align: center;
+    }
+    @media (min-width: 769px) {
+      .product {
+        grid-template-areas: "text image";
+        grid-template-columns: auto 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+    }
+    @media (max-width: 768px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+      .product img {
+        width: 100%;
+        max-width: 420px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .product img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      font-weight: 500;
+    }
+    .product p {
+      font-size: 0.85em;
+      color: #2E2E2E;
+      line-height: 1.6;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .product button {
+      background: #B8A36A;
+      border: none;
+      padding: 12px 16px;
+      color: #0F0F0F;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 14px;
+      font-size: 0.75em;
+      letter-spacing: 2px;
+    }
+    footer {
+      background: #0F0F0F;
+      color: #F3F1EC;
+      text-align: center;
+      padding: 30px;
+      margin-top: 80px;
+      font-size: 0.7em;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>MIÏS</h1>
+	 <nav>
+	  <a href="index.html">Inicio</a>
+	  <a href="bolsos.html">Bolsos</a>
+	  <a href="cinturones.html">Cinturones</a>
+	  <a href="accesorios.html" class="active">Accesorios</a>
+	</nav>
+
+</header>
+
+
+  <section class="hero">
+    <h2>Elegancia que trasciende el tiempo</h2>
+    <p>Piezas cuidadosamente diseñadas para acompañarte con discreción y sofisticación.</p>
+  </section>
+
+  <section id="productos" class="section">
+    <h2>Accesorios</h2>
+    <div class="products">
+
+      <div class="product">
+        <div class="product-text">
+          <h3>SAVOY - TARJETERO</h3>
+          <p>En el modelo Savoy, encontramos dos modelos de tarjetero, uno de ellos con solapa y el otro sin ella.
+				Savoy: este modelo presenta varios tonos o colores en cada solapa.
+				Savoy con solapa: este modelo es entero de un mismo tono o como máx 2 tonos.</p>
+          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>
+          
+          
+        </div>
+        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo A" />
+      </div>
+
+      <div class="product">
+        <div class="product-text">
+          <h3>LUME - FUNDA PARA GAFAS</h3>
+          <p>Lume Close: la solapa se cierra a traves de una apertura en la propia funda.
+				Lume Mira: funda abierta por un extremo. </p>
+          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>
+          </div>
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
+      </div>
+
+      <div class="product">
+        <div class="product-text">
+          <h3>KEY</h3>
+          <p>LLAVERO</p>
+          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo C" />
+      </div>
+	  
+	  <div class="product">
+        <div class="product-text">
+          <h3>ELARA</h3>
+			<p>CARTERA</p>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
+      </div>
+	  
+	  <div class="product">
+        <div class="product-text">
+          <h3>LENNOX</h3>
+			<p>POSAVASOS</p>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
+      </div>
+	  
+	  <div class="product">
+        <div class="product-text">
+          <h3>MERLOT</h3>
+			<p>BOLSA PARA BOTELLAS</p>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
+      </div>
+	  
+	  <div class="product">
+        <div class="product-text">
+          <h3>MARLOW</h3>
+			<p>REVISTERO </p>
+          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
+        </div>
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
+      </div>
+	  </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>
+      <a href="https://wa.me/XXXXXXXXX" target="_blank">WhatsApp</a> ·
+      <a href="https://instagram.com/miis" target="_blank">Instagram</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 MIÏS. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+

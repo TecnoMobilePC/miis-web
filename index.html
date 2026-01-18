@@ -3,300 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIÏS · Bolsos Artesanales</title>
-  <style>
- body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #F3F1EC; /* marfil */
-      color: #2E2E2E; /* gris humo */
-    }
-    header {
-      background: #0F0F0F; /* negro profundo */
-      padding: 24px;
-      text-align: center;
-      color: #F3F1EC;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.4em;
-      letter-spacing: 4px;
-      font-weight: 500;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      position: relative;
-      color: #F3F1EC;
-      margin: 0 12px;
-      text-decoration: none;
-      font-size: 0.75em;
-      letter-spacing: 2px;
-    }
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      background: #F3F1EC;
-    }
-    .hero h2 {
-      font-size: 2.1em;
-      margin-bottom: 14px;
-      font-weight: 300;
-      letter-spacing: 1px;
-    }
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+  <title>MIÏS · Elegancia Atemporal</title>
+	<link rel="stylesheet" href="style.css">
 
-    .nav-item {
-      position: relative;
-      display: inline-block;
-      padding-bottom: 16px;
-    }
-
-    .dropdown {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #0F0F0F;
-      padding: 12px 0;
-      display: none;
-      flex-direction: column;
-      min-width: 160px;
-      z-index: 10;
-    }
-
-    .dropdown a {
-      color: #F3F1EC;
-      padding: 8px 16px;
-      text-decoration: none;
-      font-size: 0.7em;
-      letter-spacing: 2px;
-      text-align: center;
-    }
-
-    .dropdown a:hover {
-      background: rgba(184,163,106,0.15);
-    }
-
-    .nav-item:hover .dropdown {
-      display: flex;
-    }
-
-    .collection-menu a {
-      text-decoration: none;
-      font-size: 0.75em;
-      letter-spacing: 3px;
-      color: #2E2E2E;
-      padding-bottom: 6px;
-      border-bottom: 1px solid transparent;
-    }
-
-    .collection-menu a:hover {
-      border-color: #B8A36A;
-    }
-
-    .products {
-      display: flex;
-      flex-direction: column;
-      gap: 80px;
-    }
-    .product {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: center;
-      background: transparent;
-      padding: 0;
-      justify-items: center;
-      text-align: center;
-    }
-    @media (min-width: 769px) {
-      .product {
-        grid-template-areas: "text image";
-        grid-template-columns: auto 1fr;
-        gap: 40px;
-        align-items: center;
-      }
-    }
-    @media (max-width: 768px) {
-      .product {
-        grid-template-columns: 1fr;
-      }
-      .product img {
-        width: 100%;
-        max-width: 420px;
-        display: block;
-        margin: 0 auto;
-      }
-    }
-    .product img {
-      width: 100%;
-      max-width: 420px;
-      display: block;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-weight: 500;
-    }
-    .product p {
-      font-size: 0.85em;
-      color: #2E2E2E;
-      line-height: 1.6;
-      max-width: 420px;
-      margin: 0 auto;
-    }
-    .product button {
-      background: #B8A36A;
-      border: none;
-      padding: 12px 16px;
-      color: #0F0F0F;
-      cursor: pointer;
-      width: 100%;
-      margin-top: 14px;
-      font-size: 0.75em;
-      letter-spacing: 2px;
-    }
-    footer {
-      background: #0F0F0F;
-      color: #F3F1EC;
-      text-align: center;
-      padding: 30px;
-      margin-top: 80px;
-      font-size: 0.7em;
-      letter-spacing: 1px;
-    }
-  </style>
 </head>
+
 <body>
-  <header>
+
+<header>
   <h1>MIÏS</h1>
   <nav>
-    <div class="nav-item">
-      <a href="#productos">Colección</a>
-      <div class="dropdown">
-        <a href="#bolsos">Bolsos</a>
-        <a href="#cinturones">Cinturones</a>
-        <a href="#accesorios">Accesorios</a>
-      </div>
-    </div>
-    <a href="#sobre">Sobre</a>
-    <a href="#contacto">Contacto</a>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="bolsos.html">Bolsos</a>
+    <a href="cinturones.html">Cinturones</a>
+    <a href="accesorios.html">Accesorios</a>
   </nav>
 </header>
 
+<section class="hero">
+  <h2>Descubre la colección</h2>
+  <p>Piezas hechas a mano, pensadas para durar más que una temporada.</p>
+</section>
 
-  <section class="hero">
-    <h2>Elegancia que trasciende el tiempo</h2>
-    <p>Piezas cuidadosamente diseñadas para acompañarte con discreción y sofisticación.</p>
-  </section>
-
-  <section id="productos" class="section">
-    <h2>Colección Bolsos</h2>
-    <div class="products">
-
-      <div class="product">
-        <div class="product-text">
-          <h3>ELÏON</h3>
-          <p>ELÏON es una pieza estructurada de líneas puras, creada para quienes buscan presencia y equilibrio. Su forma definida y su construcción firme revelan una artesanía precisa.</p>
-          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>
-          
-          
-        </div>
-        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo A" />
-      </div>
-
-      <div class="product">
-        <div class="product-text">
-          <h3>MIÏS</h3>
-          <p>MIÏS interpreta el lujo cotidiano desde la comodidad y la sobriedad. Una silueta generosa que envuelve lo esencial con naturalidad y una estética.
-		  
-		  </p>
-          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>
-          
-          
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-
-      <div class="product">
-        <div class="product-text">
-          <h3>BRUMA</h3>
-          <p>BRUMA destaca por su suavidad y su carácter relajado. Una pieza acolchada que combina ligereza y volumen con una presencia delicada, pensada para acompañar sin imponerse.</p>
-          <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo C" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>ALMA</h3>
-			<p>ALMA es una pieza funcional de carácter sereno, pensada para el día a día sin renunciar a la elegancia. Sus asas posteriores aportan equilibrio y comodidad, mientras que su cierre preciso y su interior generoso revelan una concepción práctica cuidada al detalle. Un bolso discreto, sólido y silencioso, diseñado para acompañar con naturalidad. </p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>LUMïÈRE</h3>
-			<p>LUMÏÈRE se define por su silueta envolvente y su caída suave. Una pieza de líneas limpias que equilibra amplitud y ligereza, pensada para acompañar con naturalidad. Su interior satinado y su cierre preciso aportan una sensación de cuidado y discreción en cada detalle.</p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>RUBI</h3>
-			<p>RUBÍ es una pieza flexible y sensorial, concebida para llevarse con libertad. Su piel de tacto suave y su estructura ligera dibujan una presencia delicada, casi orgánica. Un bolso íntimo, esencial, que se adapta al movimiento sin imponerse.</p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>AURA</h3>
-			<p>AURA combina estructura y fluidez en una pieza de carácter sereno. Su material de alto calibre le otorga presencia, mientras que su diseño moldeable aporta comodidad y equilibrio. Una interpretación contemporánea del lujo funcional, pensada para el día a día. </p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>ORÏS</h3>
-			<p>ORÏS destaca por su pureza formal y su construcción precisa. Una pieza de piel firme, cuidadosamente trabajada, que mantiene su forma sin perder sensibilidad. Su interior satinado y su diseño contenido reflejan una elegancia silenciosa y atemporal. </p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>CARYS</h3>
-			<p>CARYS es una pieza de noche sobria y refinada. De tamaño contenido y gesto elegante, está pensada para ocasiones especiales donde menos es más. Su estructura firme y su cierre delicado revelan una concepción precisa del lujo discreto. </p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-	  
-	  <div class="product">
-        <div class="product-text">
-          <h3>MINÏ</h3>
-			<p>MINÏ es una pieza ligera y versátil, de líneas sencillas y carácter delicado. Su diseño compacto y su interior satinado aportan equilibrio entre funcionalidad y estética. Un bolso pequeño con identidad propia, pensado para acompañar sin esfuerzo.</p>
-          <button onclick="window.open('https://www.paypal.me/MIIS/XX','_blank')">PayPal</button>
-        </div>
-        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo B" />
-      </div>
-
-    </div>
-  </section>
+<section class="section">
+  <div class="categories">
+    <a href="bolsos.html">BOLSOS</a>
+    <a href="cinturones.html">CINTURONES</a>
+    <a href="accesorios.html">ACCESORIOS</a>
+  </div>
+</section>
 
   <section id="sobre" class="section">
     <h2>La esencia de MIÏS</h2>
@@ -314,5 +49,6 @@
   <footer>
     <p>© 2025 MIÏS. Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>
