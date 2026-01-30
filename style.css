@@ -165,6 +165,14 @@ footer {
 
 }
 
+/* SVG – ajuste fino móvil */
+@media (max-width: 600px) {
+  .icon-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 @media (max-width: 768px) {
 
   .product {
@@ -266,11 +274,9 @@ footer {
 .icon-btn {
   background: none;
   border: none;
-  color: #F3F1EC;
-  font-size: 1.3em;   
+  padding: 4px;
   cursor: pointer;
-  padding: 6px;
-  opacity: 0.9;       
+  opacity: 0.7;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
@@ -279,4 +285,12 @@ footer {
   transform: translateY(-1px);
 }
 
+/* SVG */
+.icon-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: #F3F1EC;
+  stroke-width: 1.5;
+  fill: none;
+}
 
