@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIÏS · Cinturones Artesanales</title>
+  <title>MIÏS Cinturones Artesanales</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,15 +21,22 @@
 <div class="header-actions">
 
   <!-- Buscar -->
-  <button class="icon-btn" aria-label="Buscar">
+   <button class="icon-btn" id="search-toggle" aria-label="Buscar">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="11" cy="11" r="7"></circle>
       <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
     </svg>
   </button>
+  
+   <input
+	  type="text"
+	  class="search-input"
+	  placeholder="Buscar…"
+	  aria-label="Buscar productos"
+	/>
 
   <!-- Usuario -->
-  <button class="icon-btn" aria-label="Iniciar sesi��n">
+  <button class="icon-btn" aria-label="Iniciar sesión">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="12" cy="8" r="4"></circle>
       <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
@@ -58,10 +65,11 @@
     <h2>Cinturones</h2>
     <div class="products">
 
-      <div class="product">
+      <div class="product" data-category="cinturones">
         <div class="product-text">
-          <h3>CLASÏC</h3>
-          <p>Cinturón de la misma anchura por todo el cuerpo con agujeros y hebilla elegante (de diferentes tipos). </p>
+          <h3>CLASÏC
+</h3>
+          <p>Cinturón  de la misma anchura por todo el cuerpo con agujeros y hebilla elegante (de diferentes tipos). </p>
           <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>         
         </div>
         <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo A" />
@@ -70,7 +78,7 @@
 	  <div class="product">
         <div class="product-text">
           <h3>EDÉN</h3>
-          <p>Cinturón de la misma anchura (fino) por todo el cuerpo con agujeros y hebilla elegante común. </p>
+          <p>Cinturón  de la misma anchura (fino) por todo el cuerpo con agujeros y hebilla elegante común. </p>
           <button onclick="window.open('https://wa.me/XXXXXXXXX','_blank')">Solicitar pieza</button>         
         </div>
         <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=900&auto=format&fit=crop" alt="Bolso Modelo A" />
@@ -127,7 +135,7 @@
   <section id="contacto" class="section">
     <h2>Contacto</h2>
     <p>
-      <a href="https://wa.me/XXXXXXXXX" target="_blank">WhatsApp</a> ·
+      <a href="https://wa.me/XXXXXXXXX" target="_blank">WhatsApp</a> 路
       <a href="https://instagram.com/miis" target="_blank">Instagram</a>
     </p>
   </section>
@@ -137,6 +145,11 @@
   <footer>
     <p>© 2025 MIÏS. Todos los derechos reservados.</p>
   </footer>
+  
+   <!-- JAVASCRIPT -->
+ <script src="script.js"></script>
+
+  
 </body>
 </html>
 

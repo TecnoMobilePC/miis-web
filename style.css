@@ -257,6 +257,9 @@ footer {
   .icon-btn {
     font-size: 1.4em;
   }
+  .search-input.active {
+  width: 120px;
+}
 
 }
 
@@ -292,5 +295,39 @@ footer {
   stroke: #F3F1EC;
   stroke-width: 1.5;
   fill: none;
+}
+
+
+/* BUSCADOR DESPLEGABLE */
+
+.search-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(243,241,236,0.5);
+  color: #F3F1EC;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  padding: 4px 0;
+
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(243,241,236,0.6);
+}
+
+.search-input.active {
+  width: 140px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #B8A36A;
 }
 

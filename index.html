@@ -23,12 +23,19 @@
 <div class="header-actions">
 
   <!-- Buscar -->
-  <button class="icon-btn" aria-label="Buscar">
+  <button class="icon-btn" id="search-toggle" aria-label="Buscar">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="11" cy="11" r="7"></circle>
       <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
     </svg>
   </button>
+	  <input
+		type="text"
+		class="search-input"
+		placeholder="Buscar…"
+		aria-label="Buscar productos"
+	  />
+  
 
   <!-- Usuario -->
   <button class="icon-btn" aria-label="Iniciar sesión">
@@ -81,6 +88,9 @@
   <footer>
     <p>© 2025 MIÏS. Todos los derechos reservados.</p>
   </footer>
+  
+<script src="script.js"></script>
+
 
 </body>
 </html>

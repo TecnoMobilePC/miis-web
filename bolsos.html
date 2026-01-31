@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MIÏS · Bolsos Artesanales</title>
+  <title>MIÏS Bolsos Artesanales</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,15 +21,22 @@
 <div class="header-actions">
 
   <!-- Buscar -->
-  <button class="icon-btn" aria-label="Buscar">
+   <button class="icon-btn" id="search-toggle" aria-label="Buscar">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="11" cy="11" r="7"></circle>
       <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
     </svg>
   </button>
+  
+	  <input
+	  type="text"
+	  class="search-input"
+	  placeholder="Buscar…"
+	  aria-label="Buscar productos"
+	/>
 
   <!-- Usuario -->
-  <button class="icon-btn" aria-label="Iniciar sesi��n">
+  <button class="icon-btn" aria-label="Iniciar sesión">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <circle cx="12" cy="8" r="4"></circle>
       <path d="M4 20c0-4 4-6 8-6s8 2 8 6"></path>
@@ -58,7 +65,7 @@
     <h2>Colección Bolsos</h2>
     <div class="products">
 
-      <div class="product">
+      <div class="product" data-category="bolsos">
         <div class="product-text">
           <h3>ELÏON</h3>
           
@@ -160,6 +167,10 @@
   <footer>
     <p>© 2025 MIÏS. Todos los derechos reservados.</p>
   </footer>
+  
+    <!-- JAVASCRIPT -->
+<script src="script.js"></script>
+
 </body>
 </html>
 
