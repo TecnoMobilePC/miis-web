@@ -1,64 +1,62 @@
-/* ===== NORMALIZAR TEXTO (quita tildes y caracteres especiales) ===== */
-function normalizeText(text) {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-
   const searchToggle = document.getElementById("search-toggle");
   const searchInput = document.querySelector(".search-input");
   const products = document.querySelectorAll(".product");
 
-  /* ===== ABRIR / CERRAR BUSCADOR ===== */
+  // Normalizar texto (quita tildes, diéresis, etc.)
+  const normalize = (text) =>
+    text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+  // Mostrar / ocultar buscador
   if (searchToggle && searchInput) {
     searchToggle.addEventListener("click", (e) => {
       e.stopPropagation();
       searchInput.classList.toggle("active");
-
-      if (searchInput.classList.contains("active")) {
-        searchInput.focus();
-      }
+      searchInput.focus();
     });
   }
 
-  /* ===== CERRAR AL HACER CLICK FUERA ===== */
-  document.addEventListener("click", (e) => {
-    if (
-      searchInput &&
-      !searchInput.contains(e.target) &&
-      !searchToggle.contains(e.target)
-    ) {
-      searchInput.classList.remove("active");
-    }
+  // Cerrar al hacer click fuera
+  document.addEventListener("click", () => {
+    if (searchInput) searchInput.classList.remove("active");
   });
 
-  /* ===== BUSCADOR REAL (NOMBRE + CATEGORÍA) ===== */
-  if (searchInput && products.length > 0) {
-    searchInput.addEventListener("input", () => {
-      const value = normalizeText(searchInput.value);
+  if (searchInput) {
+    searchInput.addEventListener("click", (e) => e.stopPropagation());
+  }
 
-      products.forEach(product => {
-        const title = normalizeText(
+  // BUSCADOR REAL
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const value = normalize(searchInput.value);
+
+      // 🔁 REDIRECCIONES POR CATEGORÍA
+      if (value === "bolsos") {
+        window.location.href = "bolsos.html";
+        return;
+      }
+
+      if (value === "cinturones") {
+        window.location.href = "cinturones.html";
+        return;
+      }
+
+      if (value === "accesorios") {
+        window.location.href = "accesorios.html";
+        return;
+      }
+
+      // 🔍 FILTRADO LOCAL
+      products.forEach((product) => {
+        const title = normalize(
           product.querySelector("h3").textContent
         );
 
-        const category = normalizeText(
-          product.dataset.category || ""
-        );
-
-        if (
-          title.includes(value) ||
-          category.includes(value)
-        ) {
-          product.style.display = "";
-        } else {
-          product.style.display = "none";
-        }
+        product.style.display = title.includes(value) ? "" : "none";
       });
     });
   }
-
 });
