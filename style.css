@@ -3,7 +3,6 @@ body {
   font-family: 'Libre Baskerville', serif;
   background: #F3F1EC;
   color: #2E2E2E;
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,14 +12,15 @@ main {
   flex: 1;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header {
   font-family: 'Helvetica Neue', Helvetica;
   background: #0F0F0F;
   padding: 24px;
-  text-align: center;
   color: #F3F1EC;
   position: relative;
+  text-align: center;
 }
 
 header h1 {
@@ -29,6 +29,8 @@ header h1 {
   letter-spacing: 4px;
   font-weight: 500;
 }
+
+/* ================= NAV ================= */
 
 nav {
   margin-top: 10px;
@@ -42,53 +44,7 @@ nav a {
   letter-spacing: 2px;
 }
 
-/* HERO */
-.hero {
-  padding: 80px 20px;
-  text-align: center;
-  background: #F3F1EC;
-}
-
-.hero h2 {
-  font-size: 2.1em;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.hero p {
-  font-size: 0.9em;
-  max-width: 520px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* SECTIONS */
-.section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* FOOTER */
-footer {
-  background: #0F0F0F;
-  color: #F3F1EC;
-  text-align: center;
-  padding: 30px;
-  margin-top: 80px;
-  font-size: 0.7em;
-  letter-spacing: 1px;
-}
-
-/* ICONOS HEADER */
-.header-actions {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+/* ================= ICONOS ================= */
 
 .icon-btn {
   background: none;
@@ -112,7 +68,19 @@ footer {
   fill: none;
 }
 
-/* BUSCADOR */
+/* ================= HEADER ACTIONS (DESKTOP) ================= */
+
+.header-actions {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ================= BUSCADOR ================= */
+
 .search-input {
   background: transparent;
   border: none;
@@ -121,11 +89,9 @@ footer {
   font-size: 0.7em;
   letter-spacing: 1px;
   padding: 4px 0;
-
   width: 0;
   opacity: 0;
   pointer-events: none;
-
   transition: width 0.3s ease, opacity 0.3s ease;
 }
 
@@ -144,20 +110,42 @@ footer {
   border-color: #B8A36A;
 }
 
-/* ===================== */
-/* ====== MÓVIL ======== */
-/* ===================== */
+/* ================= HERO ================= */
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.1em;
+  font-weight: 300;
+}
+
+.hero p {
+  font-size: 0.9em;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background: #0F0F0F;
+  color: #F3F1EC;
+  text-align: center;
+  padding: 30px;
+  margin-top: 80px;
+  font-size: 0.7em;
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
-  body {
-    font-size: 15px;
-  }
-
   header {
-    padding-top: 72px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 20px 16px;
   }
 
   header h1 {
@@ -167,43 +155,44 @@ footer {
 
   nav {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 14px;
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   nav a {
-    margin: 0;
     font-size: 0.7em;
+    margin: 0;
   }
 
-  /* SOLO la lupa a la izquierda */
+  /* 🔍 LUPA A LA IZQUIERDA */
   #search-toggle {
     position: absolute;
     left: 16px;
-    top: 20px;
+    top: 22px;
   }
 
-  /* perfil + cesta a la derecha */
-  .header-actions {
-    right: 16px;
-    top: 20px;
-  }
-
-  /* input debajo de la lupa */
   .search-input {
     position: absolute;
-    left: 16px;
-    top: 52px;
+    left: 44px; /* sale desde la lupa */
+    top: 22px;
   }
 
   .search-input.active {
-    width: 160px;
+    width: 120px;
   }
 
-  footer {
-    padding: 24px 16px;
-    font-size: 0.65em;
+  /* 👤 + 🛒 A LA DERECHA */
+  .header-actions {
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    gap: 16px;
+  }
+
+  /* evitamos centrar nada */
+  .header-actions,
+  #search-toggle {
+    transform: none;
   }
 }
