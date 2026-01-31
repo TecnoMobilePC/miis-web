@@ -18,9 +18,9 @@ header {
   font-family: 'Helvetica Neue', Helvetica;
   background: #0F0F0F;
   padding: 24px;
+  text-align: center;
   color: #F3F1EC;
   position: relative;
-  text-align: center;
 }
 
 header h1 {
@@ -46,6 +46,15 @@ nav a {
 
 /* ================= ICONOS ================= */
 
+.header-actions {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .icon-btn {
   background: none;
   border: none;
@@ -68,17 +77,6 @@ nav a {
   fill: none;
 }
 
-/* ================= HEADER ACTIONS (DESKTOP) ================= */
-
-.header-actions {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
 /* ================= BUSCADOR ================= */
 
 .search-input {
@@ -89,9 +87,11 @@ nav a {
   font-size: 0.7em;
   letter-spacing: 1px;
   padding: 4px 0;
+
   width: 0;
   opacity: 0;
   pointer-events: none;
+
   transition: width 0.3s ease, opacity 0.3s ease;
 }
 
@@ -120,6 +120,7 @@ nav a {
 .hero h2 {
   font-size: 2.1em;
   font-weight: 300;
+  letter-spacing: 1px;
 }
 
 .hero p {
@@ -127,6 +128,56 @@ nav a {
   max-width: 520px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+/* ================= PRODUCTOS ================= */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.product {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 360px;        /* 🔥 TODAS MISMO TAMAÑO */
+  object-fit: cover;   /* 🔥 SIN DEFORMAR */
+  display: block;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.product-text {
+  margin-top: 16px;
+}
+
+.product-text h3 {
+  font-size: 0.9em;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.product-text button {
+  background: none;
+  border: 1px solid #2E2E2E;
+  padding: 8px 16px;
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.product-text button:hover {
+  background: #2E2E2E;
+  color: #F3F1EC;
 }
 
 /* ================= FOOTER ================= */
@@ -138,9 +189,10 @@ footer {
   padding: 30px;
   margin-top: 80px;
   font-size: 0.7em;
+  letter-spacing: 1px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= MÓVIL ================= */
 
 @media (max-width: 600px) {
 
@@ -157,42 +209,48 @@ footer {
     display: flex;
     justify-content: center;
     gap: 14px;
-    margin-top: 14px;
+    margin-top: 16px;
   }
 
   nav a {
-    font-size: 0.7em;
     margin: 0;
+    font-size: 0.7em;
   }
 
   /* 🔍 LUPA A LA IZQUIERDA */
   #search-toggle {
     position: absolute;
-    left: 16px;
     top: 22px;
+    left: 16px;
   }
 
+  /* INPUT SALE DESDE LA IZQUIERDA */
   .search-input {
     position: absolute;
-    left: 44px; /* sale desde la lupa */
-    top: 22px;
+    top: 24px;
+    left: 44px;
   }
 
-  .search-input.active {
-    width: 120px;
-  }
-
-  /* 👤 + 🛒 A LA DERECHA */
+  /* ICONOS DERECHA */
   .header-actions {
-    position: absolute;
-    right: 16px;
     top: 22px;
-    gap: 16px;
+    right: 16px;
   }
 
-  /* evitamos centrar nada */
-  .header-actions,
-  #search-toggle {
-    transform: none;
+  .icon-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h2 {
+    font-size: 1.6em;
+  }
+
+  .product img {
+    height: 300px;
   }
 }
