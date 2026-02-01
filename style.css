@@ -203,35 +203,17 @@ footer {
 
 }
 
-/* BUSCADOR */
-.search {
+/* CONTENEDOR DE BÚSQUEDA (LUPA + INPUT) */
+.search-container {
   position: absolute;
   top: 24px;
-  right: 24px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.search input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(243,241,236,0.4);
-  color: #F3F1EC;
-  font-size: 0.7em;
-  letter-spacing: 1px;
-  padding: 4px 0;
-  width: 120px;
-  outline: none;
-}
-
-.search input::placeholder {
-  color: rgba(243,241,236,0.6);
-}
-
-.search input:focus {
-  border-color: #B8A36A;
-}
-
-/* ICONOS DEL BUSCADOR, INICIAR SESION Y CESTA */
-
+/* ICONOS DE PERFIL Y CARRO */
 .header-actions {
   position: absolute;
   top: 24px;
@@ -298,33 +280,26 @@ footer {
   border-color: #B8A36A;
 }
 
-/* SEARCH – ajuste móvil */
+/* AJUSTE MÓVIL - BÚSQUEDA A LA IZQUIERDA */
 @media (max-width: 600px) {
 	
-  /* BOTÓN DE BÚSQUEDA (LUPA) A LA IZQUIERDA */
-  .header-actions #search-toggle {
+  /* BÚSQUEDA A LA IZQUIERDA */
+  .search-container {
     position: absolute;
+    top: 20px;
     left: 16px;
-    top: 0;
-  }
-
-  /* INPUT DE BÚSQUEDA A LA IZQUIERDA (JUNTO A LA LUPA) */
-  .header-actions .search-input {
-    position: absolute;
-    left: 50px;
-    top: 4px;
+    right: auto;
   }
 
   .search-input.active {
-    width: 140px;
+    width: 120px;
   }
 
-  /* ICONOS DE PERFIL Y CARRO SE QUEDAN A LA DERECHA */
+  /* ICONOS DE PERFIL Y CARRO A LA DERECHA */
   .header-actions {
     position: absolute;
     top: 20px;
     right: 16px;
-    justify-content: flex-end;
     gap: 20px;
   }
 
