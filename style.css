@@ -230,7 +230,8 @@ footer {
   border-color: #B8A36A;
 }
 
-/* SEARCH – ajuste móvil */
+/* SEARCH – ajuste móvil 
+
 @media (max-width: 600px) {
 	
 	.header-actions {
@@ -262,6 +263,8 @@ footer {
 }
 
 }
+
+*/
 
 /* ICONOS DEL BUSCADOR, INICIAR SESION Y CESTA */
 
@@ -330,3 +333,35 @@ footer {
   outline: none;
   border-color: #B8A36A;
 }
+
+/* ================= BUSCADOR MÓVIL IZQUIERDA ================= */
+@media (max-width: 600px) {
+
+  /* Header sigue siendo referencia */
+  header {
+    position: relative;
+  }
+
+  /* LUPA A LA IZQUIERDA */
+  #search-toggle {
+    position: absolute;
+    top: 22px;
+    left: 16px;
+  }
+
+  /* INPUT SALE DESDE LA IZQUIERDA */
+  .search-input {
+    position: absolute;
+    top: 24px;
+    left: 48px;
+  }
+
+  /* ICONOS PERFIL + CESTA A LA DERECHA */
+  .header-actions {
+    position: absolute;
+    top: 22px;
+    right: 16px;
+    gap: 14px;
+  }
+}
+
