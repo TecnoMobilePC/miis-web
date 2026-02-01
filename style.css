@@ -230,44 +230,6 @@ footer {
   border-color: #B8A36A;
 }
 
-/* SEARCH – ajuste móvil */
-@media (max-width: 600px) {
-	
-  /* Contenedor de búsqueda a la izquierda */
-  .search {
-    position: absolute;
-    top: 20px;
-    left: 16px;
-    right: auto;
-    margin-top: 0;
-    text-align: left;
-  }
-
-  .search input {
-    width: 100%;
-    max-width: 180px;
-  }
-
-  /* Iconos de perfil y carro a la derecha */
-  .header-actions {
-    position: absolute;
-    top: 20px;
-    right: 16px;
-    margin-top: 0;
-    justify-content: flex-end;
-    gap: 20px;
-  }
-
-  .icon-btn {
-    font-size: 1.4em;
-  }
-
-  .search-input.active {
-    width: 120px;
-  }
-
-}
-
 /* ICONOS DEL BUSCADOR, INICIAR SESION Y CESTA */
 
 .header-actions {
@@ -334,4 +296,40 @@ footer {
 .search-input:focus {
   outline: none;
   border-color: #B8A36A;
+}
+
+/* SEARCH – ajuste móvil */
+@media (max-width: 600px) {
+	
+  /* BOTÓN DE BÚSQUEDA (LUPA) A LA IZQUIERDA */
+  .header-actions #search-toggle {
+    position: absolute;
+    left: 16px;
+    top: 0;
+  }
+
+  /* INPUT DE BÚSQUEDA A LA IZQUIERDA (JUNTO A LA LUPA) */
+  .header-actions .search-input {
+    position: absolute;
+    left: 50px;
+    top: 4px;
+  }
+
+  .search-input.active {
+    width: 140px;
+  }
+
+  /* ICONOS DE PERFIL Y CARRO SE QUEDAN A LA DERECHA */
+  .header-actions {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  .icon-btn {
+    font-size: 1.4em;
+  }
+
 }
